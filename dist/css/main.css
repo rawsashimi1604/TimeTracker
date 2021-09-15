@@ -32,7 +32,6 @@ main {
 }
 
 main section {
-  border: 1px solid white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,10 +45,15 @@ main section {
   width: 400px;
 }
 
-main section .statistics-img {
-  position: absolute;
-  width: 40px;
-  display: none;
+main section .img-wrapper {
+  height: 50px;
+}
+
+main section .img-wrapper img {
+  width: 100px;
+  float: right;
+  margin-right: 20px;
+  margin-top: -10px;
 }
 
 main section .statistics {
@@ -120,5 +124,92 @@ main section .statistics-prev span:first-of-type {
   margin-bottom: 25px;
   color: #bdc1ff;
   font-weight: 500;
+}
+
+main .work {
+  background-color: #ff8c66;
+}
+
+main .play {
+  background-color: #56c2e6;
+}
+
+main .study {
+  background-color: #ff5c7c;
+}
+
+main .exercise {
+  background-color: #4acf81;
+}
+
+main .social {
+  background-color: #7536d3;
+}
+
+main .self-care {
+  background-color: #f1c65b;
+}
+
+main .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #1c1f4a;
+}
+
+main .details .report {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2em;
+  background-color: #5847eb;
+  border-radius: 20px;
+}
+
+main .details .report img {
+  width: 80px;
+  border: 4px solid white;
+  border-radius: 100%;
+  margin-right: 20px;
+}
+
+main .details .report span:first-child {
+  display: block;
+  font-size: 18px;
+  color: #bdc1ff;
+}
+
+main .details .report span:nth-child(2) {
+  font-size: 30px;
+  font-weight: 300;
+}
+
+main .details .timeframes {
+  padding: 1.5em 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 20px;
+  color: #6f76c8;
+}
+
+main .details .timeframes span {
+  display: inline-block;
+  width: 33%;
+  text-align: center;
+  margin-left: -15px;
 }
 /*# sourceMappingURL=main.css.map */
