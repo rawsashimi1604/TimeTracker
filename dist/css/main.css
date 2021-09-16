@@ -6,6 +6,10 @@
   font-family: 'Rubik', sans-serif;
 }
 
+.toggle-white {
+  color: white !important;
+}
+
 body {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -124,6 +128,10 @@ main section .statistics-prev span:first-of-type {
   margin-bottom: 25px;
   color: #bdc1ff;
   font-weight: 500;
+}
+
+main section .statistics-prev span:first-of-type:hover {
+  color: white;
 }
 
 main section .statistics:hover, main section .statistics:active {
