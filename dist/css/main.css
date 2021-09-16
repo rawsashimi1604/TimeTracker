@@ -42,7 +42,7 @@ main section {
   position: relative;
   border-radius: 20px;
   overflow: hidden;
-  width: 400px;
+  width: 300px;
 }
 
 main section .img-wrapper {
@@ -108,7 +108,7 @@ main section .statistics-prev {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 15px;
+  font-size: 13px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -124,6 +124,11 @@ main section .statistics-prev span:first-of-type {
   margin-bottom: 25px;
   color: #bdc1ff;
   font-weight: 500;
+}
+
+main section .statistics:hover, main section .statistics:active {
+  cursor: pointer;
+  background-color: #6f76c8;
 }
 
 main .work {
@@ -211,5 +216,91 @@ main .details .timeframes span {
   width: 33%;
   text-align: center;
   margin-left: -15px;
+}
+
+main .details .timeframes span:hover, main .details .timeframes span:active {
+  cursor: pointer;
+  color: #bdc1ff;
+}
+
+@media (min-width: 992px) {
+  main {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+  }
+  main section:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / 3;
+    height: 500px;
+  }
+  main section:nth-child(1) .timeframes {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0;
+            flex: 1 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  main section:nth-child(1) .timeframes span {
+    text-align: start;
+    margin: 0;
+    margin-left: 20px;
+  }
+  main section:nth-child(1) .report {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 60%;
+            flex: 0 0 60%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  main section:nth-child(1) .report img {
+    margin-bottom: 50px;
+  }
+  main section:nth-child(1) .report .report-details span:nth-child(1) {
+    font-size: 16px;
+  }
+  main section:nth-child(1) .report .report-details span:nth-child(2) {
+    font-size: 50px;
+    font-weight: 300;
+  }
+  main section .statistics {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 85%;
+            flex: 1 0 85%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main section .statistics-hours {
+    font-size: 55px;
+    margin-top: 20px;
+  }
+  main section .statistics-buffer {
+    display: none;
+  }
+  main section .statistics-prev {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    position: relative;
+  }
+  main section .statistics-prev span:nth-child(1) {
+    position: absolute;
+    top: -120px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

@@ -17,7 +17,6 @@ main {
     row-gap: 2em;
 
     section {  
-
         display: flex;
         flex-direction: column;
 
@@ -26,9 +25,8 @@ main {
         border-radius: 20px;
         overflow: hidden;
         
-        width: 400px;
-        
-        
+        width: 300px;
+
         .img-wrapper {
             height: 50px;
 
@@ -39,6 +37,7 @@ main {
                 margin-top: -10px;
             }
         }
+
         .statistics {
             background-color: hsl(235, 46%, 20%);
             display: flex;
@@ -74,7 +73,7 @@ main {
             &-prev {
                 display: flex;
                 flex-direction: column;
-                font-size: 15px;
+                font-size: 13px;
                 align-items: center;
                 color: hsla(236, 100%, 87%, 0.795);
                 font-weight: 300;
@@ -89,6 +88,12 @@ main {
                 }
             }
         }
+
+        .statistics:hover, .statistics:active {
+            cursor: pointer;
+            background-color: hsl(235, 45%, 61%);
+        }
+
     }
 
     .work {
@@ -158,6 +163,81 @@ main {
             }
         }
 
+        .timeframes span:hover, .timeframes span:active {
+            cursor: pointer;
+            color: hsl(236, 100%, 87%);
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    main {
+
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+
+        section:nth-child(1) {
+            grid-row: 1 / 3;
+            height: 500px;
+
+            .timeframes {
+                flex: 1 0;
+                flex-direction: column;
+                align-items: start;
+                justify-content: space-around;
+                span {
+                    text-align: start;
+                    margin: 0;
+                    margin-left: 20px;
+                }
+            }
+
+            .report {
+                flex: 0 0 60%;
+                flex-direction: column;
+                align-items: flex-start;
+
+                img { 
+                    margin-bottom: 50px;
+                }
+
+                .report-details span:nth-child(1) {
+                    font-size: 16px;
+                }
+
+                .report-details span:nth-child(2) {
+                    font-size: 50px;
+                    font-weight: 300;
+                }
+                
+            }
+        }
+
+        section {
+            .statistics {
+                flex: 1 0 85%;
+                flex-direction: column;
+
+                &-hours {   
+                    font-size: 55px;
+                    margin-top: 20px;
+                }
+
+                &-buffer {
+                    display: none;
+                }
+
+                &-prev {
+                    align-items: flex-start;
+                    position: relative;
+
+                    span:nth-child(1){
+                        position: absolute;
+                        top: -120px;
+                    }
+                }
+            }
+        }
     }
     
 }
